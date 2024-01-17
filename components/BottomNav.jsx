@@ -1,9 +1,14 @@
 'use client'
-import React from 'react'
+import React, {useEffect} from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const BottomNav = () => {
+    useEffect(() => {
+        AOS.init()
+    }, [])
     return (
-        <div class="md:hidden fixed bg-white/30 backdrop-blur bottom-0 w-full h-16 left-0 shadow-[0px_-4px_6px_-1px_#bae6fd] rounded-t-3xl flex items-center justify-around px-4">
+        <div class="md:hidden fixed bg-white/30 backdrop-blur bottom-0 w-full h-16 left-0 shadow-[0px_-4px_6px_-1px_#bae6fd] rounded-t-3xl flex items-center justify-around px-4" data-aos="fade-top" data-aos-duration="500">
             <a class="p-2 hover:text-sky-400" href="/">
                 <span class="sr-only">Home</span>
                 <svg class="line w-6 h-6" stroke="currentColor" viewBox="0 0 24 24">
